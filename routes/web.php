@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('posts/{post}/comments/{comment}', function($postId, $commentId){
+	return 'post = '.$postId .'comment = '. $commentId;
+});
+
+Route::get('list','NameController@show');
+Route::resource('users', 'UserController');
